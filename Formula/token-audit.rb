@@ -7,6 +7,8 @@ class TokenAudit < Formula
   sha256 "183de83840a24cc4c7ac3fea4614c641ee37d0a0aed62f62916156329653f5dd"
   license "MIT"
 
+  depends_on "cmake" => :build # for sentencepiece
+  depends_on "rust" => :build # for rpds-py (via maturin)
   depends_on "python@3.13"
 
   resource "attrs" do
